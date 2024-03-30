@@ -1,0 +1,42 @@
+The following tools you need to set up to start with TypeScript:
+    1) Node.js – Node.js is the environment in which you will run the TypeScript compiler. Note that you don’t need to know node.js.
+    2) TypeScript compiler – a Node.js module that compiles TypeScript into JavaScript. If you use JavaScript for node.js, you can install the ts-node module. It is a TypeScript execution and REPL for node.js
+    3) Visual Studio Code or VS Code – is a code editor that supports TypeScript. VS Code is highly recommended. However, you can use your favorite editor.
+
+STEPS 
+    -> C:\Users\admin\Desktop\TYPESCRIPT>node -v
+    v20.9.0
+
+    -> C:\Users\admin\Desktop\TYPESCRIPT>npm -v
+    10.1.0
+
+    -> C:\Users\admin\Desktop\TYPESCRIPT>tsc -v
+    'tsc' is not recognized as an internal or external command,
+    operable program or batch file.
+
+Install TypeScript compiler
+    -> C:\Users\admin\Desktop\TYPESCRIPT>npm    -> install -g typescript 
+    -> tsc p1.ts
+
+added 1 package in 5s
+
+C:\Users\admin\Desktop\TYPESCRIPT>tsc -v
+Version 5.3.3
+
+C:\Users\admin\Desktop\TYPESCRIPT>code .
+
+Data Types in TypeScript
+TypeScript inherits the built-in types from JavaScript. TypeScript types are categorized into:
+
+    -> Primitive types
+    -> Object types
+
+Primitive types
+The following illustrates the primitive types in TypeScript:
+    Name	Description
+    string	represents text data
+    number	represents numeric values
+    boolean	has true and false values
+    null	has one value: null
+    undefined	has one value: undefined. It is a default value of an uninitialized variable
+    symbol	represents a unique constant value
