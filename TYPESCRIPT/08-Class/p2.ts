@@ -27,7 +27,7 @@ class Person{
 
 let person = new Person('171-28-0926','John',"Deo");
 console.log("PERSON = ", person);
-console.log("PERSON.SSN1 = ", person.ssn);
-console.log("PERSON.FIRSTNAME1 = ", person.firstName);
-console.log("PERSON.FIRSTNAME1 = ", person.firstName);
+console.log("PERSON.SSN = ", person.ssn);
+console.log("PERSON.FIRSTNAME = ", person.firstName);
+console.log("PERSON.FIRSTNAME = ", person.firstName);
 console.log("PERSON.GETFULLNAME() = ", person.getFullName());
