@@ -1,1 +1,32 @@
-<p>class works!</p>
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="bg-info text-center p-3 rounded shadow">ClassComponent Page..!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <section class="col">
+            <div class="border lead rounded p-3">
+                <p class="firstExample">This is ClassComponent First Example..!</p>
+                <p [ngClass]="'firstExample'">This is ClassComponent Second Example..!</p>
+                <p [ngClass]="'firstExample firstFont'">This is ClassComponent Third Example..!</p>
+                
+                
+                <p [class]="'secondExample'">This is ClassComponent Fourth Example..!</p>
+                <p [class]="third">This is ClassComponent Fifth Example..!</p>
+                <p [ngClass]="third">This is ClassComponent Sixth Example..!</p>
+
+                <p [class]="hasError ? 'secondExample firstFont' : 'fourthExample firstFont'">This is ClassComponent Seventh Example..!</p>
+                <p [ngClass]="hasError ? 'firstExample firstFont' : 'fourthExample firstFont'">This is ClassComponent Seventh Example..!</p>
+
+                <p [class.fourthExample]="hasError">This is ClassComponent Eight Example..!</p>
+
+                <button class="btn btn-outline-info" (click)="checkStyle()"> Change Style</button>
+
+                <div class="border rounded p-3 my-3">
+                    <p [ngClass]="addClass">This is ClassComponent Nine Example..! </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

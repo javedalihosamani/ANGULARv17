@@ -1,1 +1,25 @@
-<p>event works!</p>
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="bg-info p-3 rounded shadow text-center">EventComponent Page..!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-outline-info" (click)="ClickEvent1()">Click Event-1</button>
+            <p class="my-3 p-3">{{data1}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-outline-info" (dblclick)="ClickEvent2($event)">Click Event-2</button>
+            <p class="my-3 p-3">{{data2}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-outline-info" (click)="data3='This is Angular-17 Event Bind Example..!'">Click Event-2</button>
+            <p class="my-3 p-3">{{data3}}</p>
+        </div>
+    </div>
+</div>

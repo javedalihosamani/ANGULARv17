@@ -1,1 +1,21 @@
-<p>style works!</p>
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="bg-info text-center p-3 rounded shadow">StyleComponent Page..!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <section class="col">
+            <p class="my-3" style="color: orange;">This is StyleComponent First Example..!</p>
+            <p class="my-3"  [ngStyle]="{'background-color': 'teal', 'color':'#fff', 'padding' : '20px'}">This is StyleComponent Second Example..!</p>
+            <p class="my-3"  [style.color]="'teal'">This is StyleComponent Third Example..!</p>
+            <p class="my-3"  [style.color]="highlight">This is StyleComponent Third Example..!</p>
+            <p class="my-3"  [ngStyle]="style1">This is StyleComponent Third Example..!</p>
+            <p class="my-3"  [style.color]="hasError ? 'green' : 'red'">This is StyleComponent Fourth Example..!</p>
+            <p class="my-3"  [ngStyle]="hasError ? {'background':'green' } : {'background':'red'}">This is StyleComponent Third Example..!</p>
+            <p class="my-3"  [ngStyle]="hasError ? style1 : {'background':'red', 'color':'#fff', 'padding':'20px', 'border-radius':'10px'}">This is StyleComponent Third Example..!</p>
+
+            <button class="btn btn-outline-info" (click)="checkStyle()"> Change Style</button>
+        </section>
+    </div>
+</div>
