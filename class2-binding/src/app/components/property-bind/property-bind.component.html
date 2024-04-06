@@ -1,0 +1,48 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="lead p-3 border rounded">
+                <h1 class="bg-secondary rounded p-2 text-white text-center">{{title}}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group p-3 my-3">
+                <input type="text" name="firstName"  id="firstName" class="form-control" value="Angular-17 Default Text Box">
+            </div>
+            <!-- <div class="form-group p-3 my-3">
+                <input type="text" name="secondName" id="{{secondName}}" class="form-control" value="Angular-17">
+            </div> -->
+             <div class="form-group p-3 my-3">
+                <input type="text" name="secondName" id="{{'secondName'}}" class="form-control" value="Angular-17 Interpolation Text Box">
+            </div>
+           <div class="form-group p-3 my-3">
+                <input type="text" name="thirdName" [id]="'thirdName'" class="form-control" value="Angular-17 Property Text Box">
+            </div>
+            <div class="form-group p-3 my-3">
+                <input type="text" name="thirdName" id="myId" class="form-control" value="Angular-17 Again Default Text Box">
+            </div>
+            <!-- <div class="form-group p-3 my-3">
+                <input type="text" name="thirdName" id="{{myId}}" class="form-control" value="Angular-17 Again Interpolation Text Box">
+            </div> -->
+            <div class="form-group p-3 my-3">
+                <input type="text" name="thirdName" [id]="'myId'" class="form-control" value="Angular-17 Again Property Text Box">
+            </div>
+            <div class="form-group p-3 my-3">
+                <input type="text" name="thirdName" [id]="myId" class="form-control" value="Angular-17 Again Again Property Text Box">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2 class="bg-secondary rounded p-2 text-white text-center">Difference between Interpolation and Property Binding..!</h2>
+            <div class="form-group p-3 my-3">
+                <input type="text" name="testcase1" id="{{bindId}}" class="form-control" value="INTERPOLATION BIND" disabled="false">
+            </div>
+            <div class="form-group p-3 my-3">
+                <input type="text" name="testcase2" [id]="bindId" class="form-control" value="PROPERTY BIND" [disabled]="false">
+            </div>
+        </div>
+    </div>
+</div>

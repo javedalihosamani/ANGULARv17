@@ -1,0 +1,54 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="lead p-3 border rounded">
+                <h1 class="bg-secondary rounded p-2 text-white text-center">{{title}}</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="lead p-3 border rounded">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <p>{{"Interpolation" + " " + "Example..!"}}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Addition of Two Numbers :{{2 + 2}}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Concat Operation :{{2 + '2'}}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Hello : {{title}}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p>{{"Hi" + " " + title}}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p>{{title.length}}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p>{{title.toUpperCase()}}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p>{{title.toLowerCase()}}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p>{{siteURL}}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p>{{greet()}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+            <img src="../../../assets/images/image1.jpg" alt="" class="img-fluid rounded img-thumbnail">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <p>{{imgURL}}</p>
+                </li>
+            </ul>
+            <img src="{{imgURL}}" alt="" class="img-fluid rounded img-thumbnail">
+        </div>
+    </div>
+</div>
