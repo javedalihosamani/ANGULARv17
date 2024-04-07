@@ -1,1 +1,73 @@
-<p>ng-if works!</p>
+<div class="container my-3">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="my-3 text-warning">Ng-If Directive Example..!</h1>
+            <p>(Old Version Code)</p>
+        </div>
+    </div>
+</div>
+<hr class="text-warning">
+<div class="container my-3">
+    <div class="row">
+        <div class="col text-center">
+            <button type="button" class="btn btn-outline-warning" (click)="StatusCheck()">{{status ? "Click for Login" : "Click for Register"}}</button>
+            <p>{{status}}</p>
+        </div>
+    </div>
+</div>
+<div class="container my-3">
+    <div class="row" *ngIf="status">
+        <div class="col-xs-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6 offset-xxl-3 col-xxl-6">
+            <div class="lead border rounded p-3">
+                <form>
+                    <div class="form-group my-3 bg-warning text-white text-center p-2 rounded">
+                        <h3>Register Form</h3>
+                    </div>
+                    <div class="form-group my-3">
+                        <label for="">Enter Name</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Enter Name">
+                    </div>
+                    <div class="form-group my-3">
+                        <label for="">Enter Mobile Number</label>
+                        <input type="number" name="mob" id="mob" class="form-control" placeholder="Enter Mobile Number">
+                    </div>
+                    <div class="form-group my-3">
+                        <label for="">Enter Email ID</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group my-3">
+                        <label for="">Enter Password</label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password">
+                    </div>
+                    <div class="form-group my-3">
+                        <button type="submit" class="btn btn-outline-success">Submit</button>
+                        <button type="button" class="btn btn-outline-warning mx-3">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="!status">
+        <div class="col-xs-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6 offset-xxl-3 col-xxl-6">
+            <div class="lead border rounded p-3">
+                <form>
+                    <div class="form-group my-3 bg-warning text-white text-center p-2 rounded">
+                        <h3>Login Form</h3>
+                    </div>
+                    <div class="form-group my-3">
+                        <label for="">Enter Email ID</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group my-3">
+                        <label for="">Enter Password</label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password">
+                    </div>
+                    <div class="form-group my-3">
+                        <button type="submit" class="btn btn-outline-success">Submit</button>
+                        <button type="button" class="btn btn-outline-warning mx-3">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
