@@ -1,1 +1,96 @@
-<p>ng-for works!</p>
+<div class="container my-3">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="my-3 text-warning">Ng-For Directive Example..!</h1>
+            <p>(Old Version Code)</p>
+        </div>
+    </div>
+</div>
+<hr class="text-warning">
+<div class="container my-3">
+    <div class="row">
+        <div class="col">
+            <div class="lead border rounded p-3">
+                <h3>Example-1</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">{{empName}}</li>
+                </ul>
+
+                <h3 class="mt-4">Example-2</h3>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let item of empName">{{item}}</li>
+                </ul>
+
+                <h3 class="mt-4">Example-3</h3>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let i of empName; index as x">{{x}}) {{i}}</li>
+                </ul>
+
+                <h3 class="mt-4">Example-4</h3>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let i of empName; first as x">{{x}}) {{i}}</li>
+                </ul>
+
+                <h3 class="mt-4">Example-5</h3>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let i of empName; last as x">{{x}}) {{i}}</li>
+                </ul>
+
+                <h3 class="mt-4">Example-6</h3>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let i of empName; odd as x">{{x}}) {{i}}</li>
+                </ul>
+
+                <h3 class="mt-4">Example-7</h3>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let i of empName; even as x">{{x}}) {{i}}</li>
+                </ul>
+
+                <h3 class="mt-4">Example-8</h3>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let i of animals; let x = index">
+                        {{x}}) {{i}}
+                    </li>
+                    <li class="list-group-item">
+                        <div class="input-group">
+                            <label for="enterAnimal" class="text-success">Enter Animal Name:</label>
+                            <input type="text" class="form-control" placeholder="Enter Animal Name" #animal>
+ 
+                            <button class="btn btn-outline-warning" (click)="addAnimal(animal.value)">Add Animals</button>
+ 
+                        </div>
+                     </li>
+                </ul>
+
+                <h3 class="mt-4">Example-9</h3>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Index No</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Options</th>
+                    </tr>
+                    <tr *ngFor="let item of employee; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.email}}</td>
+                        <td><Button class="btn btn-danger" (click)="removeEmployee(i)">Remove</Button></td>
+                    </tr>
+                </table>
+                <div class="form-group my-3">
+                    <label for="name">Enter Name :</label>
+                    <input type="text" name="name" class="form-control" placeholder="Employe Name" #name>
+                </div>
+
+                <div class="form-group my-3">
+                    <label for="email">Email :</label>
+                    <input type="email" name="email" class="form-control" placeholder="Employe Name" #email>
+                </div>
+
+                <div class="form-group my-3">
+                    <button type="button" class="btn btn-outline-warning" (click)="addEmployee(name.value, email.value)">Add Employee</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
