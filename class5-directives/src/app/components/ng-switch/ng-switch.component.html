@@ -1,1 +1,55 @@
-<p>ng-switch works!</p>
+<div class="container my-3">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="my-3 text-warning">Ng-Switch Directive Example..!</h1>
+            <p>(Old Version Code)</p>
+        </div>
+    </div>
+</div>
+<hr class="text-warning">
+<div class="container my-3">
+    <div class="row">
+        <div class="col">
+            <ul class="nav nav-justified">
+                <li class="nav-item btn btn-outline-warning" (click)="onChangeAbout()">
+                  <a>About Us</a>
+                </li>
+                <li class="nav-item btn btn-outline-warning" (click)="onChangeService()">
+                  <a>Services</a>
+                </li>
+                <li class="nav-item btn btn-outline-warning" (click)="onChangeProducts()">
+                  <a>Products</a>
+                </li>
+                <li class="nav-item btn btn-outline-warning" (click)="onChangeGallery()">
+                  <a>Gallery</a>
+                </li>
+              </ul>
+        </div>
+    </div>
+
+    <div class="row my-3">
+        <div class="col">
+            <ul class="list-group" [ngSwitch]="page">
+                <li class="list-group-item text-center" *ngSwitchCase="'about'">
+                    <h2>About Us</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, velit fuga. Tempora unde quisquam error consectetur numquam, nulla sed eveniet aliquam cum soluta atque eius alias cumque, sapiente quia deleniti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim debitis rerum repudiandae alias, voluptatibus beatae repellendus magni quasi molestias, explicabo nulla fuga placeat! Esse possimus quisquam nemo accusamus minima nihil!</p>
+                </li>
+                <li class="list-group-item text-center" *ngSwitchCase="'service'">
+                    <h2>Service</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, velit fuga. Tempora unde quisquam error consectetur numquam, nulla sed eveniet aliquam cum soluta atque eius alias cumque, sapiente quia deleniti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim debitis rerum repudiandae alias, voluptatibus beatae repellendus magni quasi molestias, explicabo nulla fuga placeat! Esse possimus quisquam nemo accusamus minima nihil!</p>
+                </li>
+                <li class="list-group-item text-center" *ngSwitchCase="'product'">
+                    <h2>Products</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, velit fuga. Tempora unde quisquam error consectetur numquam, nulla sed eveniet aliquam cum soluta atque eius alias cumque, sapiente quia deleniti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim debitis rerum repudiandae alias, voluptatibus beatae repellendus magni quasi molestias, explicabo nulla fuga placeat! Esse possimus quisquam nemo accusamus minima nihil!</p>
+                </li>
+                <li class="list-group-item text-center" *ngSwitchCase="'gallery'">
+                    <h2>Gallery</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, velit fuga. Tempora unde quisquam error consectetur numquam, nulla sed eveniet aliquam cum soluta atque eius alias cumque, sapiente quia deleniti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim debitis rerum repudiandae alias, voluptatibus beatae repellendus magni quasi molestias, explicabo nulla fuga placeat! Esse possimus quisquam nemo accusamus minima nihil!</p>
+                </li>
+                <li class="list-group-item text-center" *ngSwitchDefault>
+                    <h2>Default Switch Chage is working</h2>                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
