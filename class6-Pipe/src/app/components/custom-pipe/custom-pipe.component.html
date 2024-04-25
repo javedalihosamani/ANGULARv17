@@ -1,0 +1,31 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center text-primary">Custom Pipe Example..!</h1>
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <div class="border rounded p-3 my-3">
+                <table class="table">
+                    <tr>
+                        <th>ID</th>
+                        <th>PRODUCT NAME</th>
+                        <th>PRODUCT PRICE</th>
+                        <th>STATE GST</th>
+                        <th>CENTRAL GST</th>
+                    </tr>
+                    <tr *ngFor="let item of products">
+                        <td>{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.price | currency : 'INR'}}</td>
+                        <td>{{item.sgst | gstStatePipe : item.price | currency : 'INR'}}</td>
+                        <td>{{item.cgst}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
