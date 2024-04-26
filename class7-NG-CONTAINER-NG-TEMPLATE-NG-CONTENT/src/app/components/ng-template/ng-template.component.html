@@ -53,6 +53,13 @@
     </div>
 </div>
 
+<ng-template #card>
+    <div class="card-body">
+        <h2>Card-Body</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ad, possimus consequuntur quod pariatur eveniet incidunt nostrum et officia quas neque quo, veniam alias voluptatem, in eligendi. Veritatis, modi repudiandae!</p>
+    </div>
+</ng-template>
+
 <div class="container my-5">
     <div class="row">
         <div class="col">
@@ -87,10 +94,19 @@
     </div>
 </div>
 
-<ng-template #card>
+<ng-template #email let-email="NgEmail" let-name="NgName">
     <div class="card-body">
-        <h2>Card-Body</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ad, possimus consequuntur quod pariatur eveniet incidunt nostrum et officia quas neque quo, veniam alias voluptatem, in eligendi. Veritatis, modi repudiandae!</p>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <p><b>Email</b> <span class="float-end">{{email ? email : "example@gmail.com"}}</span></p>
+            </li>
+            <li class="list-group-item">
+                <p><b>Name</b> <span class="float-end">{{name ? name : "Example"}}</span></p>
+            </li>
+            <li class="list-group-item">
+                <p><b>Mobile</b> <span class="float-end">9876543210</span></p>
+            </li>
+        </ul>
     </div>
 </ng-template>
 
@@ -128,17 +144,14 @@
     </div>
 </div>
 
-<ng-template #email let-email="NgEmail" let-name="NgName">
+<ng-template #contact let-data="Data">
     <div class="card-body">
         <ul class="list-group">
             <li class="list-group-item">
-                <p><b>Email</b> <span class="float-end">{{email ? email : "example@gmail.com"}}</span></p>
+                <p><b>Name</b> <span class="float-end">{{data?.name ? data.name : "Example"}}</span></p>
             </li>
             <li class="list-group-item">
-                <p><b>Name</b> <span class="float-end">{{name ? name : "Example"}}</span></p>
-            </li>
-            <li class="list-group-item">
-                <p><b>Mobile</b> <span class="float-end">9876543210</span></p>
+                <p><b>Email</b> <span class="float-end">{{data?.email ? data.email : "Example@gmail.com"}}</span></p>
             </li>
         </ul>
     </div>
@@ -177,15 +190,3 @@
         </div>
     </div>
 </div>
-<ng-template #contact let-data="Data">
-    <div class="card-body">
-        <ul class="list-group">
-            <li class="list-group-item">
-                <p><b>Name</b> <span class="float-end">{{data?.name ? data.name : "Example"}}</span></p>
-            </li>
-            <li class="list-group-item">
-                <p><b>Email</b> <span class="float-end">{{data?.email ? data.email : "Example@gmail.com"}}</span></p>
-            </li>
-        </ul>
-    </div>
-</ng-template>
