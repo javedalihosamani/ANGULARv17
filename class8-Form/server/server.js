@@ -13,9 +13,9 @@ app.get("/", (req, res) => {
 });
 
 app.post("/enroll", function (req, res) {
-  res.send("Hello from Server..!");
-  console.log(req.body); // It contains the user data that was submitted by the angular application.
-  res.status(401).send({ message: "Data Received..!" });
+  //res.send("Hello from Server..!");
+  //console.log(req.body); // It contains the user data that was submitted by the angular application.
+  res.status(401).send({ message: "Data Received..!" }); // Displaying the error message
 });
 
 app.listen(PORT, () => {
