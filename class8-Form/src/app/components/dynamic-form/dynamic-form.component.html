@@ -1,1 +1,104 @@
-<p>dynamic-form works!</p>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 offset-lg-2 col-lg-8 offset-xl-2 col-xl-8 offset-xxl-2 col-xxl-8">
+            <form [formGroup]="registerForm">
+                <div class="form-group my-3 bg-dark p-2 rounded">
+                    <h2 class="text-center text-white">DYNAMIC FORM</h2>
+                </div>
+
+                <div class="form-group my-3">
+                    <label for="userName">User Name :</label>
+                    <input type="text" name="userName" id="userName" class="form-control" required minlength="4" formControlName="userName" />
+
+                    <!-- EXAMPLE-1 -->
+                    <!-- <div class="alert alert-danger" *ngIf="registerForm.get('userName')?.touched && registerForm.get('userName')?.invalid" >
+                        <div *ngIf="registerForm.controls['userName'].errors?.['required']">
+                            User Name is required.
+                        </div>
+                        <div *ngIf="registerForm.controls['userName'].errors?.['minlength']">
+                            User Name must be at least 4 characters long.
+                        </div>
+                    </div> -->
+
+                    <!-- EXAMPLE-2 -->
+                    <div  *ngIf="userName?.invalid && (userName?.dirty || userName?.touched)" class="alert alert-danger">
+                        <div *ngIf="userName?.errors?.['required']">
+                            Name is required.
+                        </div>
+                        <div *ngIf="userName?.errors?.['minlength']">
+                            Name must be at least 5 characters long.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group my-3">
+                    <label for="password">Password :</label>
+                    <input type="password" name="password" id="password" class="form-control" required  formControlName="password">
+
+                    <div class="alert alert-danger" *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid">
+                        <div *ngIf="registerForm.get('password')?.errors'required'">
+                            Password is required
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group my-3">
+                    <label for="confirmPassword">Confirm Password :</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" formControlName="confirmPassword">
+
+                    <div class="alert alert-danger" *ngIf="registerForm.get('confirmPassword')?.touched && registerForm.get('confirmPassword')?.invalid">
+                        <div *ngIf="registerForm.get('confirmPassword')?.errors'required'">
+                            Confirm Password is required
+                        </div>
+                    </div>
+                </div>
+
+                <div id="address" name="address" formGroupName="address">
+                    <div class="form-group my-3">
+                        <label for="city">City :</label>
+                        <input type="text" name="city" id="city" class="form-control" formControlName="city">
+
+                        <div class="alert alert-danger" *ngIf="registerForm.get('address.city')?.touched && registerForm.get('address.city')?.invalid">
+                            <div *ngIf="registerForm.get('address.city')?.errors'required'">
+                                City is required
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group my-3">
+                        <label for="state">State :</label>
+                        <input type="text" name="state" id="state" class="form-control"  formControlName="state">
+
+                        <div class="alert alert-danger" *ngIf="registerForm.get('address.state')?.touched && registerForm.get('address.state')?.invalid">
+                            <div *ngIf="registerForm.get('address.state')?.errors'required'">
+                                State is required
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group my-3">
+                        <label for="postalCode">Postal Code :</label>
+                        <input type="text" name="postalCode" id="postalCode" class="form-control"  formControlName="postalCode">
+
+                        <div class="alert alert-danger" *ngIf="registerForm.get('address.postalCode')?.touched && registerForm.get('address.postalCode')?.invalid">
+                            <div *ngIf="registerForm.get('address.postalCode')?.errors'required'">
+                                Postal Code is required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group my-3">
+                    <button type="submit" class="btn btn-outline-dark" [disabled]="registerForm.invalid">Register</button>
+                    <button type="button" class="btn btn-outline-secondary mx-3"  (click)="loadApiData()">Load API Data</button>
+                </div>
+            </form>
+        </div>
+        <div class="lead p-3 border my-3 shadow rounded">
+            <div class="form-group my-3 bg-dark p-2 rounded">
+                <h2 class="text-center text-white">FORM VALUE</h2>
+            </div>
+            <p>{{registerForm.value | json}}</p>
+        </div>
+    </div>
+</div>
