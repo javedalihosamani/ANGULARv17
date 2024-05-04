@@ -18,11 +18,15 @@ export class StaticFormComponent {
 
   modelForm = new User("Angularv17","angular@gmail.com","9876543210","Angular","morning","subscribed");
 
+  errorMessage:any;
+  submitted = false;
   userFormData(formData:any){
+    this.submitted = true;
     console.log(`Form Data = ${JSON.stringify(formData)}`);
     this.enrollmentService.enroll(formData).subscribe(
       res=> console.log("SUCCESSFUL = ", res),
-      error => console.log("ERROR = ", error)
+      //error => console.log("ERROR = ", error)
+      error => this.errorMessage = error.statusText
     );
   }
 }
