@@ -2,6 +2,8 @@
     <div class="row">
         <div class="col">
             <h1 class="text-success">Arcing Ball Animation</h1>
+            <button class="btn btn-outline-success" (click)="toggleBounce()">Arc the Ball!</button>
+            <div class="ball" [@animateArc]="arc"></div>
         </div>
     </div>
 </div>
