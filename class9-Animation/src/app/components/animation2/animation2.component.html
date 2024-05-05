@@ -6,4 +6,21 @@
             </div>
         </div>
     </div>
+
+    <div class="row my-3">
+        <div class="col text-center">
+            <button (click)="toggleArticle()" class="btn btn-warning">Toggle Article</button>
+        </div>
+    </div>
+
+    <div class="row my-3" [@openClose]="isOpen ? 'open' : 'closed'">
+        <div class="col">
+            <article>
+                <h3 class="text-center">Sample title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque tenetur rerum laborum minus, placeat ab quidem tempora, veritatis voluptatibus optio assumenda fuga consequuntur velit ad esse nihil eligendi sunt nobis?</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium excepturi, ratione perspiciatis dolorem suscipit esse eaque eius unde veritatis. Recusandae aspernatur consequuntur quae fugiat adipisci maxime, in eius officia modi?</p>
+        </article>
+        </div>
+    </div>
 </div>
