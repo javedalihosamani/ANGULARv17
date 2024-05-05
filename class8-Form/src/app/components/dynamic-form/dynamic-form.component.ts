@@ -82,9 +82,8 @@ export class DynamicFormComponent {
   get userName(){return this.registerForm.get('userName')}
 }
 
-// 101 inch = innerWidth
+// 8.5 = innerWidth
 // 8 = feet
 
 // 12Feet = innerWidth or 7 Feet
 // 10Feet = innerHeight
-

@@ -13,25 +13,25 @@
         </div>
     </div>
 
-    <div class="row my-3" [@slider] *ngIf="status" >
+    <div class="row my-3" *ngIf="status" >
         <div class="col-md-6 offset-md-3">
-            <div class="card">
+            <div class="card" [@slider]="state">
                 <div class="card-body">
                     <form action="">
                         <fieldset>
                             <legend class="text-center">Login Here</legend>
 
-                            <div class="form-group">
+                            <div class="form-group my-3">
                                 <label for="user">Username</label>
                                 <input type="text" name="user" id="user" class="form-control">
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group my-3">
                                 <label for="pass">Password</label>
                                 <input type="password" name="pass" id="pass" class="form-control">
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group my-3">
                                 <input type="submit" value="Login" class="btn btn-outline-success">
                             </div>
                         </fieldset>
@@ -41,25 +41,25 @@
         </div>
     </div>
 
-    <div class="row my-3" [@slider] *ngIf="!status" >
+    <div class="row my-3" *ngIf="!status" >
         <div class="col-md-6 offset-md-3">
-            <div class="card">
+            <div class="card" [@slider]="state">
                 <div class="card-body">
                     <form action="">
                         <fieldset>
                             <legend class="text-center">SignUp Here</legend>
 
-                            <div class="form-group">
+                            <div class="form-group my-3">
                                 <label for="user">Username</label>
                                 <input type="text" name="user" id="user" class="form-control">
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group my-3">
                                 <label for="pass">Password</label>
                                 <input type="password" name="pass" id="pass" class="form-control">
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group my-3">
                                 <input type="submit" value="SignUp" class="btn btn-outline-warning">
                             </div>
                         </fieldset>

@@ -33,8 +33,9 @@ import { Component } from '@angular/core';
 })
 export class Animation3Component {
   status= true;
-
+  state = "login";
   toggleSlider() {
     this.status = !this.status;
+    this.state = this.state == "login" ? this.state="signUp" : this.state = "login";
   }
 }
