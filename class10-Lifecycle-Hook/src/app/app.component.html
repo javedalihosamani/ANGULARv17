@@ -18,9 +18,12 @@
           <button class="btn btn-outline-warning" (click)="onBtnClicked(name)">Submit</button>
         </div>
         <div class="form-group my-3">
-          <app-child1 [message]="inputVal">
+          <app-child1 [message]="inputVal" *ngIf="!toDestroy">
             <h3>User has entered following text: {{inputVal}}</h3>
           </app-child1>
+        </div>
+        <div class="form-group my-3">
+          <button class="btn btn-outline-danger" (click)="DestroyComponent()">Show / Hide</button>
         </div>
       </div>
     </div>
