@@ -1,0 +1,36 @@
+DIRECTIVE 
+    -> Directives are classes that add additional behaviour to elements in your application.
+
+TYPES OF DIRECTIVES 
+    1) Components 
+        -> This types of directive is the most common directive types. 
+        
+        -> Run the ng generate component <component-name> command, where <component-name> is the name of your new component.
+    
+    2) Attribute Directives 
+        -> Attribute directives that change the  appearance or behavior of an element, component, or another directive. 
+
+        Attribute Directives Types 
+            -> NgClass - Adds and removes aset of CSS classes.
+                EXAMPLE = <div [ngClass]="currentClasses" >This div is initially saveable, unchanged and special</div>
+
+            -> NgStyle - Adds and removes a set of HTML styles.
+                EXAMPLE = <div [ngStyle]="currentStyles" >This div is initially saveable, unchanged and special</div>
+
+            -> NgModel - Adds two-way data binding to an HTML form element.
+                EXAMPLE = <div [(ngModel)]="currentItem.name" id="example-ngModel" >This div is initially saveable, unchanged and special</div>
+    
+    3) Structural Directives
+        -> Directives that change the DOM layout by adding and removing DOM elements.
+
+        Structural Directives Types 
+            -> NgIf - Conditionally creates or disposes of subviews from the template.
+            -> NgFor - Repeate a noed for each item in a list.
+            -> NgSwitch - A set of directives that switch among alternative views.
+    
+    4) Custom Directives
+        -> We create directives by annoptating a class with the @Directives decorator.
+
+        CMD : 1) ng generate directive directiveName
+                            OR 
+              2) ng g d directive/directiveName

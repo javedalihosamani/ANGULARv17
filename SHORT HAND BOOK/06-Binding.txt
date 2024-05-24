@@ -1,0 +1,43 @@
+WHAT IS DATA BINDING IN ANGULAR?
+    -> Allows an internet user to manipulate web page elements using a web browser.
+
+    -> It employs dynamic HTML and does not require complex scripting orprogramming.
+
+    -> Used in web pages that contain interactive components usuch as forms, calculators, tutorials and games.
+
+TYPES OF DATA BINDING
+    1) Interpolation and Property Binding 
+        -> Interpolation is a technique that allows the user to bind a value to a UI element.
+
+        -> Interpolation binds the data one-way.
+
+        -> Property binding is a one-way mechanism that lets you set the Property of view element.
+
+        -> Property binding uses [] sytax for data binding
+        
+        -> SYNTAX:
+                        {{value}}       
+            COMPONENTS ------------> DOM
+
+    2) Event Binding 
+        -> This data binding types is when information flows from the view to the component when an event is triggered
+
+        -> The event could be a mouse click or akey press.
+
+        -> The event is generally occurred due to user interaction.
+
+        -> SYNTAX:
+                      Event
+            VIEWS ------------> COMPONENT
+
+    3) Two way Binding
+        -> Data flows from component to the view and back 
+
+        COMPONENT <-------------> View 
+
+        -> The component and view are always in sync and consistency is maintained
+
+        -> This is typically used in forms where any changes need to be reflected in both the component and the view.
+
+        
+

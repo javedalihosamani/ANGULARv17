@@ -1,0 +1,33 @@
+ANGULAR LIFECYCLE HOOKS 
+    -> Lifecycle hooks are a set of methods in Angular that are executed at specific moments during the lifecycle of a component. 
+
+    -> These methods provide a way to tap into the Angular component lifecycle and perform custom logic or operations at specific points in time 
+
+THERE ARE 8 LIFECYCLE HOOKS IN ANGULAR 
+    1) ngOnChanges() :  This lifecycle hook is executed whenever the component's input properties change.
+
+    2) ngOnInit() : This lifecycle hook is executed after the component's constructor method and is a good place to perform initial setup for the component.
+
+    3) ngDoCheck() : This lifecycle hook is executed during every change detection cycle and is a good place to perform custom change detection.
+
+    Note : Difference between ngDoCheck() and ngOnChanges()
+        -> ngDocheck called every time when there is change detection cycle runs while ngOnChange only fire when there is a change in bound model property in component 
+
+        -> ngDoCheck : this function will get called every single time an event has fired in the app that may cause a change, but not necessarily is considered a change.
+
+        -> ngOnChanges : This will only and only get called if there has been a reference change in any of the @Inputs bindings, regardless of the ChangeDetectionStrategy of the component.
+    
+    4) ngAfterContentInit() : 
+        -> This method runs after the first ngDoCheck() call.
+
+        -> This lifecycle hook is executed after the component's content has been initialized and is a good place to perform additional setup for the component's content.
+
+        -> Use ngAfterContentInit() to call something once after all of the content has been initialized.
+    
+    5) ngAfterContentChecked() : This lifecycle hook is executed after the component's content has been checked and is a good place to perform additional operations based on the component's content.
+    
+    6) ngAfterViewInit() : This lifecycle hook is executed after the component's view has been initialized and is a good place to perform additional setup for the component's view.
+    
+    7) ngAfterViewChecked() : This lifecycle hook is executed after the component's view has been checked and is a good place to perform additional operations based on the component's view.
+    
+    8) ngOnDestroy() : This lifecycle hook is executed just before the component is destroyed and is a good place to perform cleanup operations for the component.

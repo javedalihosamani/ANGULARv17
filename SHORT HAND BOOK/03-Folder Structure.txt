@@ -1,0 +1,100 @@
+ANGULAR FOLDER STRUCTURE
+	1) NODE MODULES FOLDER 
+		-> Provides npm packages to the entire workspace. Workspace-wide node_modules dependencies are visible to all projects.
+		-> It just a directory created by npm and a way of tracking each packages you install locally via package.json. 
+		-> If you had tried deleting the node_module folder and ran the application, you would get Error:Cannot find module 'some-module/methods'.
+		-> You can think of the node_modules folder like a cache for the external modules that your project depends upon.
+		-> When you npm install them, they are downloaded from the web and copied into the node_modules folder and Node.js is trained to look for them there when you import them (without a specific path).
+		-> This is because there's no reason to store copies of all your dependent modules in your own GitHub project. The exact version you were using is known and stored in your package.json or package-lock.json
+
+	2) SRC FOLDER
+		-> Source files for the root-level application project.
+		-> For a single-application workspace, the src subfolder of the workspace contains the source files (application logic, data, and assets) for the root application. 
+	
+	3) WORKSPACE CONFIGURATION FILES
+
+		3.1) .editorconfig
+			-> Configuration for code editors.
+			-> EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs. 
+			-> The EditorConfig project consists of a file format for defining coding styles and a collection of text editor plugins that enable editors to read the file format and adhere to defined styles. 
+			-> EditorConfig files are easily readable and they work nicely with version control systems.
+	
+		3.2) .gitignore
+			-> Specifies intentionally untracked files that Git should ignore.
+
+		3.3) README.md	
+			-> Introductory documentation for the root application.
+
+	4) LIBRARY PROJECT FILES
+		4.1) angular.json	
+			-> CLI configuration defaults for all projects in the workspace, including configuration options for build, serve, and test tools that the CLI uses, such as Karma, and Protractor. For details, see Angular Workspace Configuration.
+
+		4.2) package.json	
+			-> Configures npm package dependencies that are available to all projects in the workspace. 
+			-> See npm documentation for the specific format and contents of this file.
+
+		4.3) package-lock.json	
+			-> Provides version information for all packages installed into node_modules by the npm client. 
+			-> See npm documentation for details. If you use the yarn client, this file will be yarn.lock instead.
+	
+	5) APPLICATION SERVER FILE
+		5.1) server.ts
+			-> The server.ts file in Angular Universal serves as the entry point for server-side rendering (SSR) in an Angular application.
+			-> The server.ts file configures a Node.js Express server and Angular server-side rendering. 
+			-> CommonEngine is used to render an Angular application.
+			-> A method which returns an NgModule or a promise which resolves to an ApplicationRef
+		
+	6) APPLICATION CONFIGURATION FILES
+		6.1) tsconfig.app.json	
+			-> Application-specific TypeScript configuration, including TypeScript and Angular template compiler options. 
+			-> See TypeScript Configuration and Angular Compiler Options.
+
+		6.2) tsconfig.spec.json
+			-> TypeScript configuration for the application tests. See TypeScript Configuration.
+		
+		6.3) tsconfig.json
+			-> The base TypeScript configuration for projects in the workspace. 
+			-> All other configuration files inherit from this base file. 
+			-> For more information, see the Configuration inheritance with extends section of the TypeScript documentation.
+
+	7) APPLICATION SORCE FILES
+		7.1) App Folder -> Contains the component files in which your application logic and data are defined.
+		
+		7.2) Assets Folder -> Contains image and other asset files to be copied as-is when you build your application.
+
+		7.3) favicon.ico -> An icon to use for this application in the bookmark bar.
+
+		7.4) index.html	
+			-> The main HTML page that is served when someone visits your site. 
+			-> The CLI automatically adds all JavaScript and CSS files when building your app, so you typically don't need to add any <script> or <link> tags here manually.
+
+		7.5) main.server.ts
+
+		7.6) main.ts 
+			-> The main entry point for your application. 
+			-> Compiles the application with the JIT compiler and bootstraps the application's root module (AppModule) to run in the browser. 
+			-> You can also use the AOT compiler without changing any code by appending the --aot flag to the CLI build and serve commands.
+
+		7.7) styles.css
+			-> Lists CSS files that supply styles for a project. 
+			-> The extension reflects the style preprocessor you have configured for the project.
+
+	8) INSIDE THE SRC FODLER
+		8.1) app/app.component.css -> Defines the base CSS stylesheet for the root AppComponent.
+
+		8.2) app/app.component.html -> Defines the HTML template associated with the root AppComponent.
+		
+		8.3) app/app.component.spec.ts -> Defines a unit test for the root AppComponent.
+		
+		8.4) app/app.component.ts
+			-> Defines the logic for the application's root component, named AppComponent. 
+			-> The view associated with this root component becomes the root of the view hierarchy as you add components and services to your application.
+
+		8.5) app.config.server.ts
+
+		8.6) app/app.config.ts
+			-> Defines the application config logic that tells Angular how to assemble the application. 
+			-> As you add more providers to the app, they must be declared here.
+
+		8.7) app.routes.ts
+			-> In a single-page app, you change what the user sees by showing or hiding portions of the display that correspond to particular components, rather than going out to the server to get a new page.

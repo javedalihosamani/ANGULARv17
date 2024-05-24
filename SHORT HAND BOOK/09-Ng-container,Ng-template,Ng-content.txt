@@ -1,0 +1,8 @@
+1)NG-CONTAINER 
+    -> Angular <ng-container>: A Versatile Structural Directive Angular's <ng-container> provides a convenient way to group and manipulate elements without introducing extra HTML tags. 
+
+2) NG-TEMPLATE
+    -> ng-template is an Angular element that is used for rendering HTML in a template.
+
+3) NG-CONTENT 
+    -> allows developers to project content dynamically into a component's template.

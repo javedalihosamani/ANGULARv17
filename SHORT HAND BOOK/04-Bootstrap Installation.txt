@@ -1,0 +1,5 @@
+STEP-1 => angularproject> npm i bootstap
+
+STEP-2 => After Installation go to angular.json file and update with bootstrap files address.
+
+STEP-3 => restart your angular application because have to config bootstrap files address

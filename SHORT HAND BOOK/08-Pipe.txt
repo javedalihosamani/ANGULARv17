@@ -1,0 +1,13 @@
+PIPE 
+    -> Used to transform the DATA 
+    -> Pipes will take data input and convert/ transform into a desired format.
+
+TYPES OF PIPES 
+    1) Built-In Pipe 
+        -> Default pipe 
+    2) Parameterized Pipe 
+        -> We can pass parameters to pipe 
+    3) Chaining Pipe 
+        -> We can connect multiple pipes to data input 
+    4) Custom Pipe 
+        cmd : ng g p pipes/simple-pipe

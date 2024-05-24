@@ -1,0 +1,25 @@
+STEP-1 
+    -> angularProject> ng generate component components/bind
+    -> The above cmd is used for to create a child component.
+    -> This cmd helps to create unit test file. (bind.component.spec.ts)
+    -> EXAMPLE 
+        CREATE src/app/components/bind/bind.component.html (19 bytes)
+        CREATE src/app/components/bind/bind.component.spec.ts (582 bytes)
+        CREATE src/app/components/bind/bind.component.ts (226 bytes)
+        CREATE src/app/components/bind/bind.component.css (0 bytes)
+
+STEP-2 
+    -> angularProject> ng generate component components/iterpolation-bind --skip-tests
+    -> The above cmd is used for to create a child component.
+    -> This cmd avoid to create unit test file. (bind.component.spec.ts)
+    -> EXAMPLE 
+        CREATE src/app/components/iterpolation-bind/iterpolation-bind.component.html (32 bytes)
+        CREATE src/app/components/iterpolation-bind/iterpolation-bind.component.ts (277 bytes)
+        CREATE src/app/components/iterpolation-bind/iterpolation-bind.component.css (0 bytes)
+
+STEP-3 = Short Hand CMD
+    -> angularProject> ng g c components/pnf --skip-tests
+    -> EXAMPLE 
+        CREATE src/app/components/pnf/pnf.component.html (18 bytes)
+        CREATE src/app/components/pnf/pnf.component.ts (222 bytes)
+        CREATE src/app/components/pnf/pnf.component.css (0 bytes)

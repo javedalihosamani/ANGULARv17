@@ -1,0 +1,102 @@
+SUMMARY
+	1) Create form template
+	2) Bind data with a model
+	3) Perform Validation
+	4) Provide visual feedback
+	5) Display Error messages
+	6) Post the form data to a server
+	7) Receive the response
+	8) Handler any error from the server
+
+ANGULAR SUPPORT FOR FORMS
+	1) Two way Data Binding
+	2) Change Tracking 
+	3) Validations
+	4) Error Handler
+	5) Unit Testing
+
+TYPES OF FORMS IN ANGULAR
+	1) STATIC/TEMPLATE DRIVEN FORM
+		- Easy to use
+		- Simple and Straight and forward 
+		- All the validations, form elements are all defined in the template file.
+
+	2) DYNAMIC/ REACTIVE FORM 
+		- All the form elements, user interactions and validations are handled in the component class
+		- We will make use of Angular's built in formGroups and formControl
+		- Can control better data binding
+		- Exclusive defines custom regular expression patterns of error handling
+		- We will need to improve ReactFormsModule in our app module
+		- Very flexible and allow users to define, develop complex requirements of forms
+		- More login in the components class and less in HTML mark up itself
+
+CREATED TWO COMPONENTS
+	1) STATIC/TEMPLATE DRIVEN FORM (FormsModule)
+	2) DYNAMIC or REACTIVE FORM(ReactiveFormsModule)
+
+CREATE A CLASS
+	- ng g class classes/User 
+
+STATIC
+	-> Complete the THML code and update it.
+	-> ng g class classes/User (Creating a new class file)  and update it.
+	-> Creating an object of User class inside the static.component.ts file.
+
+
+TRACKING STATE AND VALIDITY (GO TO THE BELOW TABLE)
+==============================================================================
+STATE									CLASS IF TRUE 		CLASS IF FALSE
+==============================================================================
+1) The control has been visited.		ng-touched			ng-untouched
+2) The control's value has changed.		ng-dirty			ng-pristine 
+3) The control's value is valid.		ng-valid			ng-invalid
+
+
+NG-MODEL PROPERTIES
+classes 				PROPERTIES
+1) ng-touched 		-	touched
+2) ng-untouched		- 	untouched
+3) ng-pristine		- 	pristine
+4) ng-dirty 		- 	dirty
+5) ng-valid 		-  	valid
+6) ng-invalid		- 	invalid
+
+
+CREATE A SERVER FOLDER INSIDE THE PROJECT FOLDER AND USE THE FOLLOWING CMD
+	
+	-> Command for to a package.json file.
+		- npm init --yes
+		- Wrote to E:\ANGULAR\class7-forms\server\package.json:
+
+		-> Result
+			{
+			  "name": "server",
+			  "version": "1.0.0",
+			  "description": "",
+			  "main": "index.js",
+			  "scripts": {
+			    "test": "echo \"Error: no test specified\" && exit 1"
+			  },
+			  "keywords": [],
+			  "author": "",
+			  "license": "ISC"
+			}
+
+	-> Command for Packages	
+		-> npm install --save express body-parser cors (CROS = Cross-Origin Resource Sharing)
+
+	-> Command for to launch the node server
+		->	node server.js
+			Server is running on port 3000
+
+CREATE A SERVICE
+	-> ng g s service/enrollment
+
+GOTO ANGULAR APPLICATION AND UPDATE APP.CONFIG.TS FILE.
+	import { provideClientHydration } from '@angular/platform-browser';
+	import { provideHttpClient } from '@angular/common/http';
+
+	export const appConfig: ApplicationConfig = {
+  		providers: [provideRouter(routes), provideClientHydration(), provideHttpClient()]
+	};
+
