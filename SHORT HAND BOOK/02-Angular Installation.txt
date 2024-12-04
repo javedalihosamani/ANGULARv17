@@ -4,7 +4,7 @@ Angular CLI
         -> In the terminal - you can run commands and get most of the work done easily
         -> It provides some commands and schematics which helps us with faster code generation 
 
-0.1 To get the terminal in Visual Studio Code 
+0.1 To get the terminal in Visual Studio Code
     -> The short cut is 
         "ctrl+backtick ( upper top left side)"
 
